@@ -1,0 +1,8 @@
+There are 6 teams
+
+Team1 Branch=Team1 ( create folder as Team1 and work in that folder )
+Team2 Branch=Team2 ( create folder as Team2 and work in that folder )
+Team3 Branch=Team3 ( create folder as Team3 and work in that folder )
+Team4 Branch=Team4 ( create folder as Team4 and work in that folder )
+Team5 Branch=Team5 ( create folder as Team5 and work in that folder )
+Team6 Branch=Team6 ( create folder as Team6 and work in that folder )
