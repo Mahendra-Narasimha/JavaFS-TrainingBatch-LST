@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Workshop Registration</title>
+		<style>
+			body{font-family:Segoe UI,Roboto,Arial,sans-serif;background:#f6f8fa;color:#111;margin:0;padding:20px}
+			main{max-width:480px;margin:36px auto;background:#fff;border:1px solid #e1e4e8;border-radius:8px;padding:24px;box-shadow:0 6px 18px rgba(9,30,66,0.08)}
+			h1{font-size:20px;margin:0 0 16px}
+			form > div{margin-bottom:12px}
+			label{display:block;font-size:13px;margin-bottom:6px}
+			input{width:100%;padding:10px;border:1px solid #d0d7de;border-radius:6px;font-size:14px}
+			button{display:inline-block;padding:10px 16px;border:none;background:#0069d9;color:#fff;border-radius:6px;font-size:14px;cursor:pointer}
+			button:active{transform:translateY(1px)}
+			#msg{margin-top:12px;font-size:14px;color:#036;}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Workshop Registration</h1>
+			<p>Please register for the upcoming workshop by providing your roll number and contact number.</p>
+
+			<form id="registration" action="#" method="post" onsubmit="return handleSubmit(event)">
+				<div>
+					<label for="roll">Roll No</label>
+					<input id="roll" name="roll" type="text" required pattern="\d+" title="Digits only" placeholder="e.g. 12345" />
+				</div>
+
+				<div>
+					<label for="contact">Contact Number</label>
+					<input id="contact" name="contact" type="tel" required pattern="\d{10}" title="Enter 10 digit number" placeholder="10 digit mobile number" />
+				</div>
+
+				<button type="submit">Register</button>
+			</form>
+
+			<p id="msg" aria-live="polite"></p>
+
+			<script>
+				function handleSubmit(e){
+					e.preventDefault();
+					var roll = document.getElementById('roll').value.trim();
+					var contact = document.getElementById('contact').value.trim();
+					document.getElementById('msg').textContent = 'Registered: Roll ' + roll + ', Contact ' + contact + '.';
+					document.getElementById('registration').reset();
+					return false;
+				}
+			</script>
+		</main>
+	</body>
+</html>
